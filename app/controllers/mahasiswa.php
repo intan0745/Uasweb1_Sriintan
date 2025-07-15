@@ -35,18 +35,17 @@ class Mahasiswa extends Controller {
                 'nim' => $nim,
                 'email' => $email,
                 'jurusan' => $jurusan
-            ]) > 0) 
-
-            Flasher::setFlash('berhasil','ditambahkan','succes');
+            ]) > 0) {
+                Flasher::setFlash('berhasil','ditambahkan','success');
                 header('Location: ' . BASEURL . '/mahasiswa');
                 exit;
-            
+            }
+        } else {
+            Flasher::setFlash('gagal','ditambahkan','danger');
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
         }
-        else {
-             Flasher::setFlash('gagal','ditambahkan','danger');
-                header('Location: ' . BASEURL . '/mahasiswa');
-                exit;
-        }
-        // Bisa menambahkan logic untuk menampilkan form tambah jika tidak ada data yang dipost
     }
-}
+
+   
+
