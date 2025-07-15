@@ -32,12 +32,12 @@
         <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
                         <div class="form-group">
             <label for="nama" >Nama</label>
-            <input type="text" class="form-control" id="nama" name="nama">
+            <input type="number" class="form-control" id="nama" name="nama">
             </div>
 
                         <div class="mb-3">
             <label for="nama" >Nim</label>
-            <input type="Text" class="form-control" id="nim" name="nim">
+            <input type="text" class="form-control" id="nim" name="nim">
             </div>
 
                         <div class="form-group">
