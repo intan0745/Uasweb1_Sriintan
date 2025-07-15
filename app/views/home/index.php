@@ -15,7 +15,7 @@
   <p>The .jumbotron class indicates a big box for calling extra attention to featured content or information:</p>                  
   <div class="jumbotron">
     <h1>Hello World!</h1>
-    <p>Look over here!</p>
+    <p>Hello nama saya sriintan <?= $data['nama']; ?></p>
   </div>
 </div>
 
