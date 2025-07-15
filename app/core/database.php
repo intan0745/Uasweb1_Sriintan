@@ -18,7 +18,7 @@ class Database {
         ];
 
         try {
-            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
+            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);        
         } catch (PDOException $e) {
             die($e->getMessage());
         }
@@ -54,8 +54,8 @@ class Database {
             }
         }
 
-        $this->stmt->bindValue($param, $value, $type);
-    }
+     $this->stmt->bindValue($param, $value, $type);
+}
 
     public function execute()
     {
