@@ -15,12 +15,13 @@ class Mahasiswa_model {
     return $this->db->resultSet();
 
    }
-   public function getMahasiswaById($id)
+  public function getMahasiswaById($id)
 {
-   $this->db->query("SELECT * FROM mahasiswa WHERE id = :id");
-$this->db->bind('id', $id);
-return  $this->db->single();
+    $this->db->query("SELECT * FROM mahasiswa WHERE id = :id");
+    $this->db->bind('id', $id);
+    return $this->db->single();
 }
+
 
 public function tambahDataMahasiswa($data)
 {

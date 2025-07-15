@@ -8,7 +8,7 @@
 
     <div class="row">
         <div class="col-lg-6">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+            <button type="button" class="btn btn-primary tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
         Tambah Data Mahasiswa
         </button>
         <br></br>
@@ -18,6 +18,12 @@
   <li class="list-group-item ">
     <?= $mhs['nama']; ?>
 <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['nama']; ?>" class="badge text-bg-primary ml-2">detail</a>
+<a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" 
+   class="badge text-bg-warning ml-2 tampilModalUbah" 
+   data-bs-toggle="modal" 
+   data-bs-target="#formModal"
+   data-id="<?= $mhs['id']; ?>">ubah</a>
+
                        <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" 
    class="badge text-bg-danger float-right" 
    onclick="return confirm('Yakin ingin menghapus?');">
@@ -38,7 +44,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="judulModal">Tambah Data Mahasiswa</h1>
+        <h1 class="modal-title fs-5" id="formModalLabel">Tambah Data Mahasiswa</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
